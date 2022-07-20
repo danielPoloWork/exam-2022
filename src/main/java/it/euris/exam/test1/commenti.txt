@@ -1,0 +1,29 @@
+Interface segregation principle
+Questo principio prevede che l'implementazione delle nostre interfacce utilizzino tutti i metodi al
+suo interno. Implica che non ci possono essere:
+  - metodi vuoti, ovvero metodi privi di codice;
+  - metodi con codice ma che non sono utilizzati dalla classe che implementa l'interfaccia.
+
+Esempio:
+Se ho una interfaccia IOperation.java con due metodi {calculateSum(); calculateDivision();} e due
+classi Sum.java e Division.java. Non sarebbe corretto implementare l'interfaccia perché le due
+classi avrebbero dei metodi che non utilizzano. La soluzione più opportuna sarebbe creare due
+interfacce, una per Sum.java con il metodo {calculateSum();} e una per Division.java con il metodo
+{calculateDivision();}.
+
+****************************************************************************************************
+
+Single responsibility principle
+Quando implementiamo del codice dobbiamo esseri sicuri che la sua funzionalità non sia mutabile e ma
+univoca. Implica che non ci possono essere:
+  - classi che gestiscono dati e al contempo eseguono operazioni
+  - metodi che eseguono operazioni e al contempo vanno a modificare i dati
+
+Esempio:
+Se abbiamo una classe Triangle.java che gestisce i lati del triangolo implica che le uniche
+funzionalità della classe sono limitate alla lettura e scrittura dei nostri lati (setter e getter +
+relativo costruttore). Se volessimo fare delle operazioni (calcoli) ad esempio dati i lati
+estrapolare il perimetro oppure l'area, questi risulterebbero dei metodi da inserire in una classe
+distinta (ad esempio TriangleService.java con {calculatePerimeter(); calculateArea();}
+
+
