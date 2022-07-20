@@ -13,8 +13,8 @@ public class Calculator {
             addOperation.setResult(addOperation.getLeft() + addOperation.getRight());
         }
 
-        if(operation instanceof  SubstractionOperation){
-            SubstractionOperation subOperation = (SubstractionOperation) operation;
+        if(operation instanceof SubtractionOperation){
+            SubtractionOperation subOperation = (SubtractionOperation) operation;
             subOperation.setResult(subOperation.getLeft() - subOperation.getRight());
         }
 

@@ -1,6 +1,6 @@
 package it.euris.exam.test2;
 
-public class SubstractionOperation implements CalculatorOperation {
+public class SubtractionOperation implements CalculatorOperation {
 
     private double left;
     private double right;

@@ -1,0 +1,19 @@
+Le classi AdditionOperation.java e SubtractionOperation presentano ridondanza:
+ - stessi parametri d'istanza
+ - stessi metodi getter/setter
+
+ Sarebbe opportuno creare una super classe che gestisca i dati ed i metodi get/set.
+
+****************************************************************************************************
+
+La classe CalculatorOperation.java è una interfaccia vuota nel senso che non contiene nessun metodo
+ma è stata implementa in alcune classi.
+
+****************************************************************************************************
+
+La classe Calculator.java presenta un metodo {calculate();} che ha del codice ridondate per eseguire
+due operazioni simili (somma e sottrazione) si potrebbe fare un metodo generico che cambia l'effetto
+in base alla classe che lo utilizza. Un metodo {calculate();} richiamato da delle classi: Sum(),
+Division(), Subtraction() etc. Di conseguenza se vado a implementare nuove funzionalità (operazioni)
+non sarà necessario modificare la classe Calculator.java ma baserà creare una classe che estende per
+utilizzare il metodo con effetto custom.
